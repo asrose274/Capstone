@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="280.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentController">
+    <children>
+        <GridPane layoutX="72.0" layoutY="75.0" prefHeight="92.0" prefWidth="344.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.6" minWidth="10.0" prefWidth="143.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="188.0" />
+            <ColumnConstraints />
+
+
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="261.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="261.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Amount Remaining" />
+                <TextField fx:id="loanRemainText" editable="false" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                <Label text="Last Payment Date" GridPane.rowIndex="2" />
+                <DatePicker fx:id="lastPaymentDatePicker" prefHeight="25.0" prefWidth="202.0" promptText="Select Date" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Payment Amount" GridPane.rowIndex="1" />
+            <TextField fx:id="loanPaymentAmountText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            </children>
+        </GridPane>
+        <Label layoutX="207.0" layoutY="14.0" prefHeight="40.0" prefWidth="88.0" text="Payment">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="processPaymentButton" layoutX="100.0" layoutY="202.0" mnemonicParsing="false" onAction="#onProcessPayment" prefHeight="30.0" prefWidth="125.0" text="Process Payment">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="finishedButton" layoutX="251.0" layoutY="202.0" mnemonicParsing="false" onAction="#onFinished" prefHeight="30.0" prefWidth="126.0" text="Finished">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+
+
+    </children>
+</AnchorPane>

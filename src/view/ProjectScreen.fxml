@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="474.0" prefWidth="736.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjectController">
+    <children>
+        <GridPane layoutX="26.0" layoutY="72.0" prefHeight="201.0" prefWidth="281.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.6" minWidth="10.0" prefWidth="111.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="149.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Project Description" />
+                <Label text="Loan Request" GridPane.rowIndex="1" />
+                <TextField fx:id="projectDescText" GridPane.columnIndex="1" />
+                <TextField fx:id="loanRequestText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Project Status" GridPane.rowIndex="2" />
+                <ComboBox fx:id="projectStatusCombo" prefHeight="25.0" prefWidth="197.0" promptText="Select..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <Label layoutX="287.0" layoutY="14.0" prefHeight="40.0" prefWidth="127.0" text="Project View">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button layoutX="247.0" layoutY="420.0" mnemonicParsing="false" onAction="#onSaveProject" prefHeight="25.0" prefWidth="81.0" text="Save">
+            <font>
+                <Font size="14.0" />
+            </font></Button>
+        <Button fx:id="cancelAddCustomerButton" layoutX="374.0" layoutY="419.0" mnemonicParsing="false" onAction="#onCancelProject" prefHeight="32.0" prefWidth="81.0" text="Cancel">
+            <font>
+                <Font size="14.0" />
+            </font></Button>
+      <TableView fx:id="loansTable" layoutX="350.0" layoutY="54.0" prefHeight="287.0" prefWidth="375.0">
+        <columns>
+          <TableColumn fx:id="loanIdCol" prefWidth="58.0" text="Loan ID" />
+            <TableColumn fx:id="amountRemainCol" prefWidth="146.0" text="Amount Remaining" />
+            <TableColumn fx:id="originalAmountCol" prefWidth="170.0" text="Original Amount" />
+        </columns>
+      </TableView>
+      <Button layoutX="350.0" layoutY="341.0" mnemonicParsing="false" onAction="#onAddLoan" prefHeight="25.0" prefWidth="81.0" text="Add">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="497.0" layoutY="341.0" mnemonicParsing="false" onAction="#onModifyLoan" prefHeight="25.0" prefWidth="81.0" text="Modify">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="644.0" layoutY="341.0" mnemonicParsing="false" onAction="#onDeleteLoan" prefHeight="25.0" prefWidth="81.0" text="Delete">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+
+    </children>
+</AnchorPane>
